@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>LIBERTE DE NOS MOTS</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>LIBERTE DE NOS MOTS !</h1>
+Nous lançons cette pétition pour demander la suppression de la fonctionnalité de censure automatique des mots sur notre serveur Discord.
+Nous pensons qu'une modération trop stricte nuit à la liberté d'expression et à l'ambiance naturelle des échanges. Les utilisateurs doivent pouvoir s’exprimer librement et assumer pleinement leurs propos, sans être filtrés par un robot.
+
+La responsabilisation des membres passe par le dialogue et la modération humaine, pas par une censure automatique.
+    <p>Total de signatures : <strong><%= totalSignatures %></strong></p>
+
+    <% if (hasSigned) { %>
+        <p>✅ Vous avez déjà signé cette pétition.</p>
+    <% } else { %>
+        <form method="POST" action="/sign">
+            <button type="submit">Signer</button>
+        </form>
+    <% } %>
+</body>
+</html>
